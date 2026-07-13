@@ -1,0 +1,13 @@
+name: verify
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - name: Syntax check
+        run: node --check src/lbc-seller-trust.user.js
+      - name: Grant count check
+        run: test "$(grep -c '@grant' src/lbc-seller-trust.user.js)" -eq 3
