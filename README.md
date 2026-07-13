@@ -25,6 +25,8 @@ On `leboncoin.fr` search pages, each ad card's seller is checked against two sig
 Sellers matching either signal get a small red badge on their ad card, labeled
 **"new"**, **"multi-listing"**, or both — hover it for the full explanation.
 
+![Search results with "new" and "new + multi-listing" badges on seller names](docs/img/badges-screenshot.png)
+
 ## Install
 
 1. Install [Tampermonkey](https://www.tampermonkey.net/) for your browser.
